@@ -1,0 +1,127 @@
+/**
+ * Uni-Due Theme by Tobias Berger
+ */
+
+html {
+  /*background-color:#efe4bf;*/
+}
+
+body {
+  background-image:none;
+  background-color:transparent;
+  /*padding-top:15px;*/
+}
+
+#header, #mainscreen {
+  /*width:95%;
+  margin-right:auto;
+  margin-left:auto;*/
+}
+
+#header {
+  /*background-color: #ffffff;*/
+}
+
+#topline {
+  border-bottom:none;
+  background-image:none;
+  background-color:#00417d;
+}
+
+#topnav {
+  background-image:none;
+  background-color:#004c93;
+}
+
+#taskbar {
+  background-color:#004c93;
+}
+
+#toplogo {
+  padding-top:0;
+}
+
+#messagetoolbar, #addressbooktoolbar {
+  /*background-color: #ffffff;*/
+}
+
+.minwidth {
+  min-width:0;
+  position:static;
+}
+
+/* Styles für schmale Darstellung */
+
+@media only screen
+and (max-width : 560px) {
+
+  /* Logo ausblenden */
+  #toplogo {
+    display:none;
+  }
+}
+
+/* Styles für eine "mobile" Darstellung */
+
+@media only screen
+and (max-width : 480px) {
+
+  /* Definition fester Positionen aufheben */
+  #mainscreen, #messagetoolbar, #mailview-left, #mailview-right,
+  #mailboxcontainer, #messagelistcontainer, #mailview-top, #messagelistfooter,
+  #folderlist-content, #folderlist-footer, #messagecontent, .listbox .scroller,
+
+  #settings-sections, #settings-right, #sectionslist, #preferences-box,
+  #preferences-box .iframebox,
+  
+  #addressview-left, #addressview-right, #addresslist, #contacts-box,
+  #contacts-box .iframebox
+  {
+    position:static;
+  }
+
+  /* Vergrößerung der Höhe des blauen Balkens zulassen, linken Abstand entfernen */
+
+  #topline {
+    padding-left:0px;
+  }
+
+  #topnav {
+    height:auto;
+    padding-left:0;
+  }
+
+  /* Umbruch der Buttons ermöglichen */
+  #messagetoolbar {
+    height:auto;
+    white-space:normal;
+  }
+
+  /* Breite ausnutzen */
+  #mailview-left, #mailboxcontainer, #settings-sections, #sectionslist {
+    width:auto;
+  }
+
+  
+  /* Oberen Abstand erzeugen */
+  #mailview-right, #settings-right, #preferences-box {
+    margin-top:1em;
+  }
+
+}
+
+
+.toolbar a.button.bounce{
+	background: url(/plugins/bounce/skins/uni-due/bounce_act.png) no-repeat;
+	background-position: 10px -5px;
+}
+
+ul.toolbarmenu li span.bounce{
+	background: url(/plugins/bounce/skins/uni-due/bounce_act.png) no-repeat;
+	background-position: 10px -5px;
+}
+
+/* Auswahl der Skins in den Einstellungen ausblenden */
+fieldset.skin {
+  display:none;
+}

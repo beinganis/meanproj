@@ -1,0 +1,54 @@
+  
+      <h4>Professor profile</h4>
+    
+<div class="row">
+    <div class="col">
+        <div class="card headling-card shadow">
+            <ul>
+                <li *ngFor="let article of articles">
+                    <a href={{article.url}}>{{article.title}}</a>
+                </li>
+            </ul>
+        </div>
+     
+    </div>
+</div>
+    
+<br><br><br>
+<div class="col-md-8">
+    <div class="col-md-8">
+        <p>Thesis:</p>
+    </div>
+               
+    <div class="col-md-8">
+                
+        <input type="text" class="form-control" id="usr">
+                
+    </div>
+</div>
+<br>               
+<div class="col-md-8">
+    <div class="col-md-8">
+    <label for="comment">Pre Requierments:</label>
+    </div>   
+   
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+ 
+</div>
+                
+                
+                
+                
+                
+                
+                
+                <br><br><br>
+                <div class="col-md-10">
+                    <button style="font-size:13px" class="btn btn-success" style="cursor:pointer">Submit
+                    </button>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    <button style="font-size:13px" class="btn btn-success" style="cursor:pointer">Show Result
+                    </button>
+                
+                </div>
+

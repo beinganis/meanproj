@@ -1,0 +1,34 @@
+<h4>Login</h4>
+<p *ngIf="matchpassword" style="color:red">password is not Match</p>
+<form class="was-validated">
+<div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input [(ngModel)]="user.email" name="email" type="email" class="form-control" id="inputEmail" placeholder="abc@uni-due.de" 
+    data-error="Bruh, that email address is invalid" required>
+    <div class="help-block with-errors"></div>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out valid value.</div>
+</div>
+
+
+<div ng-if="!showPassword"
+       class="form-group has-feedback">
+    <label>password</label>
+
+    <span ng-if="params.password"
+          ng-click="toggleShowPassword()"
+          class="glyphicon glyphicon-eye-open form-control-feedback" 
+          style="cursor: pointer; pointer-events: all;">
+
+          <input [(ngModel)]="user.password" name="password"
+          type="password" class="form-control"  placeholder="choose password" 
+           required>
+    </span>
+  </div>
+  
+  <div class="row justify-content-end">
+      <div class="col-1">
+        <button type="submit" (click)="senduser()" class="btn btn-info justify-content-end align-self-end" style="margin-left: -25px">Login</button>
+      </div>
+    </div>
+</form>

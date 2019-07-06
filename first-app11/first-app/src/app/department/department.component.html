@@ -1,0 +1,26 @@
+<div class="container">
+  <h5>Department</h5>
+<div class="row">
+  <div class="col-md-4">
+      <div class="row" *ngFor="let department of departments;let i=index">
+          <div class="col-md-12 list-group">
+              <a
+                      (click)="selectDepartment(i)"
+                      style="cursor: pointer"
+                      class="list-group-item clearfix">
+                  <div class="pull-right">
+                      <h5>{{department.name}}</h5>
+                      <p>{{department.description}}</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+  
+   <div class="col-md-8">
+ 
+       <app-subdepartments [subdepartments]="subdepartments"></app-subdepartments>
+   </div>
+</div>
+</div>
+
